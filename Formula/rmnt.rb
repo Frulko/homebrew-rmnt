@@ -5,23 +5,23 @@
 class Rmnt < Formula
   desc "TUI ncdu-style pour naviguer et restaurer des backups restic S3"
   homepage "https://github.com/Frulko/rmnt"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   depends_on "restic"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Frulko/rmnt/releases/download/v0.1.3/rmnt_0.1.3_darwin_amd64.tar.gz"
-      sha256 "5371105ebbd5b8bfbb7024d90cdeb1b674be5eef81286c0c795c4de7f95c551f"
+      url "https://github.com/Frulko/rmnt/releases/download/v0.1.4/rmnt_0.1.4_darwin_amd64.tar.gz"
+      sha256 "9f607feb5f4b9dad13407ef02e0828b0729e217352015cb9e28b0c22251a6972"
 
       define_method(:install) do
         bin.install "rmnt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Frulko/rmnt/releases/download/v0.1.3/rmnt_0.1.3_darwin_arm64.tar.gz"
-      sha256 "eb681e7859ba41841d148476405be502fa351bbbb4550eecfd59bdedea40dbad"
+      url "https://github.com/Frulko/rmnt/releases/download/v0.1.4/rmnt_0.1.4_darwin_arm64.tar.gz"
+      sha256 "86b5a81997ab6fadf2ac55521b9288596e43a7c0dfe8edb4f001a6d1b29a0ec0"
 
       define_method(:install) do
         bin.install "rmnt"
@@ -31,15 +31,15 @@ class Rmnt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frulko/rmnt/releases/download/v0.1.3/rmnt_0.1.3_linux_amd64.tar.gz"
-      sha256 "af1822f33f5f94d204ddda88f706a3a7c6958dda41c1b59b8259c4021f97be28"
+      url "https://github.com/Frulko/rmnt/releases/download/v0.1.4/rmnt_0.1.4_linux_amd64.tar.gz"
+      sha256 "c99693073acb991c80134ed699dbc9952945a006d369fdc2a0238083577fe8e7"
       define_method(:install) do
         bin.install "rmnt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Frulko/rmnt/releases/download/v0.1.3/rmnt_0.1.3_linux_arm64.tar.gz"
-      sha256 "2e57e539c226170e7d5a6bce43540bac01eb00c46ebaa78763e1c3b51acd4430"
+      url "https://github.com/Frulko/rmnt/releases/download/v0.1.4/rmnt_0.1.4_linux_arm64.tar.gz"
+      sha256 "73860a6f6c71a0f6cb2be8156ec5afeafa58b6d44ec3e9df1855d3d4e97d3e52"
       define_method(:install) do
         bin.install "rmnt"
       end
